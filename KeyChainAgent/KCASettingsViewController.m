@@ -1,16 +1,16 @@
 //
-//  MPHSettingsViewController.m
+//  KCASettingsViewController.m
 //  MacPassHTTP
 //
 //  Created by Michael Starke on 11/11/15.
+//  Modified by Veit-Hendrik Schlenker on 24/03/18
 //  Copyright © 2015 HicknHack Software GmbH. All rights reserved.
 //
 
-#import "MPHSettingsViewController.h"
-#import "MPHMacPassHTTP.h"
-#import "MPHServerDelegate.h"
+#import "KCASettingsViewController.h"
+#import "KCAKeyChainAgent.h"
 
-@interface MPHSettingsViewController ()
+@interface KCASettingsViewController ()
 
 @property (weak) IBOutlet NSTextField *portTextField;
 @property (weak) IBOutlet NSButton *showMenuItemCheckButton;
@@ -22,7 +22,7 @@
 
 @end
 
-@implementation MPHSettingsViewController
+@implementation KCASettingsViewController
 
 - (void)dealloc {
   NSLog(@"%@ dealloc", [self class]);
@@ -66,10 +66,10 @@
   }
 }
 - (IBAction)clearKeys:(id)sender {
-  [self.plugin.serverDelegate clearKeys];
+//  [self.plugin.serverDelegate clearKeys];
 }
 
 - (IBAction)clearPermissions:(id)sender {
-  [self.plugin.serverDelegate clearPermissions];
+//  [self.plugin.serverDelegate clearPermissions];
 }
 @end
